@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Http\Resources\ArticleResource;
 
 class ArticleController extends Controller
 {
@@ -14,7 +15,9 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        return $article;
+        //remove 'data' wrapper
+        ArticleResource::withoutWrapping();
+        return new ArticleResource($article);
     }
 
     public function store(Request $request)
