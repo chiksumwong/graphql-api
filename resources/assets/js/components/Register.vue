@@ -4,7 +4,7 @@
             <p>Unfortunately, the error failed to complete the registration</p>
         </div>
         <div class="alert alert-success" v-if="success">
-            <p>Registration is complete, you can now<router-link :to="{name:'login'}">log in</router-link>了</p>
+            <p>Registration is complete, you can now <router-link :to="{name:'login'}">LOGIN</router-link>了</p>
         </div>
         <form autocomplete="off" @submit.prevent="register" v-if="!success" method="post">
             <div class="form-group" v-bind:class="{ 'has-error': error && errors.name }">
