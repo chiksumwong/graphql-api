@@ -3,10 +3,12 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
 
-import router from './router'
+import router from './router/index.js'
 
 Vue.use(VueAxios, axios);
 axios.defaults.baseURL = 'http://apidemo.test/api';
+
+Vue.router = router
 
 Vue.use(require('@websanova/vue-auth'), {
    auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
@@ -17,4 +19,4 @@ Vue.use(require('@websanova/vue-auth'), {
 new Vue({
     render: h => h(App),
     router,
-  }).$mount('#app')
+}).$mount('#app')

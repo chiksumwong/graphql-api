@@ -3,15 +3,18 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-
-//components
+/*
+ * Components
+ */
 import Dashboard from '../components/Dashboard.vue';
 import Home from '../components/Home.vue';
 import Register from '../components/Register.vue';
 import Login from '../components/Login.vue';
-//components
 
 
+/*
+ * Routers
+ */
 export default new VueRouter({
   mode: 'history',
     routes: [{

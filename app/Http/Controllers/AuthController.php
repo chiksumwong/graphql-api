@@ -33,6 +33,7 @@ class AuthController extends Controller
                      'msg' => 'Invalid Credentials.'
                  ], 400);
          }
+
          return response(['status' => 'success'])
              ->header('Authorization', $token);
      }
@@ -46,10 +47,11 @@ class AuthController extends Controller
          ], 200);
      }
 
-    //  其中 user() 方法用於獲取當前登錄用戶數據，
-    //  而 refresh() 方法用於檢查當前登錄用戶 token 是否仍然有效。
-
-     public function user(Request $request)
+    /*  
+    *   其中 user() 方法用於獲取當前登錄用戶數據
+    *   而 refresh() 方法用於檢查當前登錄用戶 token 是否仍然有效。，
+    */  
+     public function user()
      {
          $user = User::find(Auth::user()->id);
          return response([
