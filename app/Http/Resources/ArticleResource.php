@@ -21,6 +21,7 @@ class ArticleResource extends Resource
                 'title' => $this->title,
                 'content' => $this->body,
             ],
+            'comments' => new ArticleCommentsResource($this->comments),
         ];
     }
 
@@ -32,6 +33,7 @@ class ArticleResource extends Resource
         return [
             'links'    => [
                 'self' => url('api/articles/' . $this->id),
+                'status'=> 'success'
             ],
         ];
     }
