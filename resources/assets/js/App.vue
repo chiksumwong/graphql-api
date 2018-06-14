@@ -4,13 +4,16 @@
             <nav>
                 <ul class="list-inline">
                     <li>
-                        <router-link :to="{ name: 'home' }">Home Page</router-link>
+                        <router-link :to="{ name: 'home' }">HOME</router-link>
                     </li>
-                    <li class="pull-right">
-                        <router-link :to="{ name: 'login' }">Login</router-link>
+                    <li v-if="!$auth.check()" class="pull-right">
+                        <router-link :to="{ name: 'login' }">LOGIN</router-link>
                     </li>
-                    <li class="pull-right">
-                        <router-link :to="{ name: 'register' }">Registration</router-link>
+                    <li v-if="!$auth.check()" class="pull-right">
+                        <router-link :to="{ name: 'register' }">REGISTER</router-link>
+                    </li>
+                    <li v-if="$auth.check()" class="pull-right">
+                        <a href="#" @click.prevent="$auth.logout()">LOGOUT</a>
                     </li>
                 </ul>
             </nav>
