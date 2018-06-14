@@ -28,6 +28,7 @@ Route::post('register', 'Auth\RegisterController@register');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 
+//backend
 Route::post('auth/register', 'AuthController@register');
 
 Route::post('auth/login', 'AuthController@login');
@@ -40,3 +41,4 @@ Route::group(['middleware' => 'jwt.auth'], function(){
 Route::group(['middleware' => 'jwt.refresh'], function(){
   Route::get('auth/refresh', 'AuthController@refresh');
 });
+//backend

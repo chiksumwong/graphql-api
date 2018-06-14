@@ -1167,13 +1167,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+//components
 
 
+
+
+//components
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
+
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_axios___default.a, __WEBPACK_IMPORTED_MODULE_2_axios___default.a);
 __WEBPACK_IMPORTED_MODULE_2_axios___default.a.defaults.baseURL = 'http://apidemo.test/api';
+
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
+    mode: 'history',
     routes: [{
         path: '/',
         name: 'home',
@@ -1201,13 +1208,17 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
         }
     }]
 });
+
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.router = router;
+
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(49), {
     auth: __webpack_require__(53),
     http: __webpack_require__(54),
     router: __webpack_require__(55)
 });
+
 __WEBPACK_IMPORTED_MODULE_4__App_vue___default.a.router = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.router;
+
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_4__App_vue___default.a).$mount('#app');
 
 /***/ }),
