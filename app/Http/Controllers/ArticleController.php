@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Http\Resources\ArticleResource;
+use App\Http\Resources\ArticleCollection;
 
 class ArticleController extends Controller
 {
     public function index()
     {
-        return Article::all();
+        // return Article::all();
+        
+        //Pagination
+        return new ArticleCollection(Article::paginate());
     }
 
     public function show(Article $article)
