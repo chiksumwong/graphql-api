@@ -6,6 +6,8 @@ use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as BaseType;
 use GraphQL;
 
+use App\GraphQL\Fields\PictureField;
+
 class UserType extends BaseType
 {
     protected $attributes = [
@@ -29,7 +31,8 @@ class UserType extends BaseType
             'comments' => [
                 'type' => Type::listOf(GraphQL::type('Comment')),
                 'description' => 'The comments by the user'
-            ]
+            ],
+            'picture' => PictureField::class
         ];
     }
 
