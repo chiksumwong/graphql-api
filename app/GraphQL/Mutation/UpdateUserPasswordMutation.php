@@ -8,6 +8,7 @@ use GraphQL\Type\Definition\Type;
 use GraphQL;
 
 use App\User;
+use JWTAuth;
 
 class UpdateUserPasswordMutation extends Mutation
 {
@@ -48,5 +49,13 @@ class UpdateUserPasswordMutation extends Mutation
         $user->save();
 
         return $user;
+    }
+
+    /*
+    *   override Field->authenticated()
+    */
+    public function authenticated($root, $args, $context)
+    {
+        return JWTAuth::parseToken()->authenticate() ? true : false;
     }
 }
