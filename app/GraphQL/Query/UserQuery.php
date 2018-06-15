@@ -3,7 +3,7 @@
 namespace App\GraphQL\Query;
 
 use Folklore\GraphQL\Support\Query;
-// use GraphQL\Type\Definition\ResolveInfo;
+use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
 use GraphQL;
 
@@ -36,10 +36,10 @@ class UserQuery extends Query
     //     return [];
     // }
 
-    public function resolve($root, $args)
+    public function resolve($root, $args, $context, ResolveInfo $info)
     {
         $fields = $info->getFieldSelection($depth = 3);
-
+    
         if (isset($args['id'])) {
             $users = User::where('id', $args['id']);
         } elseif (isset($args['email'])) {
