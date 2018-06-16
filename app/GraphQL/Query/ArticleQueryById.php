@@ -31,7 +31,7 @@ class ArticleQueryById extends Query
     public function resolve($root, $args, $context, ResolveInfo $info)
     {
         if (empty($args['id'])) {
-            throw new \InvalidArgumentException('请传入文章ID!');
+            throw new \InvalidArgumentException('Please enter the ID of Article!');
         }
         return Article::find($args['id']);
     }
