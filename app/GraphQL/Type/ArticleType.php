@@ -37,9 +37,16 @@ class ArticleType extends BaseType
 
     protected function resolveContentField($root, $args)
     {
+        return $root->body;
+    }
+
+    protected function resolveUserField($root, $args)
+    {
         if (isset($args['id'])) {
             return $root->author->where('id', $args['id']);
         }
         return $root->author;
     }
+
+
 }
