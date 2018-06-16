@@ -7,6 +7,10 @@ use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
 use GraphQL;
 
+use JWTAuth;
+use App\Article;
+use Auth;
+
 class AddPostMutation extends Mutation
 {
     protected $attributes = [
