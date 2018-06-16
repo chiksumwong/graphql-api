@@ -129,6 +129,7 @@ return [
                 'user' => \App\GraphQL\Query\UserQueryById::class,
                 'allUsers' => \App\GraphQL\Query\UserQuery::class,
                 'allPosts' => \App\GraphQL\Query\ArticleQuery::class,
+                'post' => \App\GraphQL\Query\ArticleQueryById::class,
             ],
             'mutation' => [
                 'updateUserPassword' => \App\GraphQL\Mutation\UpdateUserPasswordMutation::class,
