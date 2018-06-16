@@ -32,7 +32,11 @@ class UserType extends BaseType
                 'type' => Type::listOf(GraphQL::type('Comment')),
                 'description' => 'The comments by the user'
             ],
-            'picture' => PictureField::class
+            'picture' => PictureField::class,
+            'token' => [
+                'type' => Type::string(),
+                'description' => 'The token of the user',
+            ],
         ];
     }
 
