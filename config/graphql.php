@@ -126,7 +126,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // 'users' => \App\GraphQL\Query\UserQuery::class,
+                'user' => \App\GraphQL\Query\UserQueryById::class,
                 'allUsers' => \App\GraphQL\Query\UserQuery::class,
             ],
             'mutation' => [
@@ -189,6 +189,7 @@ return [
     'types' => [
         'User' => \App\GraphQL\Type\UserType::class,
         'Comment' => \App\GraphQL\Type\CommentType::class,
+        'Article' => \App\GraphQL\Type\ArticleType::class,
         'CommentStatusEnum' => \App\GraphQL\Enums\CommentStatusEnum::class
     ],
 
