@@ -46,7 +46,6 @@ class SignupMutation extends Mutation
 
     public function resolve($root, $args, $context, ResolveInfo $info)
     {
-        // return [];
         $user = new User();
         $user->name = $args['name'];
         $user->email = $args['email'];
