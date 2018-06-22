@@ -38,9 +38,9 @@ class AuthController extends Controller
              ->header('Authorization', $token);
      }
      
-     public function logout()
+     public function logout(Request $request)
      {
-         JWTAuth::invalidate();
+         JWTAuth::invalidate($request->Authorization);
          return response([
              'status' => 'success',
              'msg' => 'Logged out Successfully.'
@@ -51,7 +51,7 @@ class AuthController extends Controller
     *   其中 user() 方法用於獲取當前登錄用戶數據
     *   而 refresh() 方法用於檢查當前登錄用戶 token 是否仍然有效。，
     */  
-     public function user()
+     public function user(Request $request)
      {
          $user = User::find(Auth::user()->id);
          return response([

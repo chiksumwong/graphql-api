@@ -3,10 +3,10 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import App from './App.vue';
 
-import router from './router/index.js'
+import router from './router'
 
 Vue.use(VueAxios, axios);
-axios.defaults.baseURL = 'http://apidemo.test/api';
+axios.defaults.baseURL = 'http://graphql-api.test/api';
 
 Vue.router = router
 

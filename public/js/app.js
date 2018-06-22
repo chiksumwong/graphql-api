@@ -12118,7 +12118,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App_vue__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router_index_js__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(38);
 
 
 
@@ -12127,9 +12127,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_axios___default.a, __WEBPACK_IMPORTED_MODULE_1_axios___default.a);
-__WEBPACK_IMPORTED_MODULE_1_axios___default.a.defaults.baseURL = 'http://apidemo.test/api';
+__WEBPACK_IMPORTED_MODULE_1_axios___default.a.defaults.baseURL = 'http://graphql-api.test/api';
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.router = __WEBPACK_IMPORTED_MODULE_4__router_index_js__["a" /* default */];
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.router = __WEBPACK_IMPORTED_MODULE_4__router__["a" /* default */];
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(50), {
    auth: __webpack_require__(54),
@@ -12141,7 +12141,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
    render: function render(h) {
       return h(__WEBPACK_IMPORTED_MODULE_3__App_vue___default.a);
    },
-   router: __WEBPACK_IMPORTED_MODULE_4__router_index_js__["a" /* default */]
+   router: __WEBPACK_IMPORTED_MODULE_4__router__["a" /* default */]
 }).$mount('#app');
 
 /***/ }),

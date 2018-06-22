@@ -136,6 +136,7 @@ return [
                 'updateUserEmail' => \App\GraphQL\Mutation\UpdateUserEmailMutation::class,
                 'createUser' => \App\GraphQL\Mutation\SignupMutation::class,
                 'login' => \App\GraphQL\Mutation\LoginMutation::class,
+                'logout' => \App\GraphQL\Mutation\LogoutMutation::class,
                 'addPost' => \App\GraphQL\Mutation\AddPostMutation::class,
             ]
         ]
